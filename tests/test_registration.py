@@ -7,6 +7,7 @@ from generators import generate_email, generate_password
 
 
 
+
 def test_registration_success():
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 10)
