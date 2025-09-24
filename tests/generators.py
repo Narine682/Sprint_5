@@ -15,7 +15,6 @@ def generate_password(length=6):
     return ''.join(random.choice(chars) for _ in range(length))
 
 
-
 def login(driver, email, password):
     driver.get(URL)
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(LOGIN_EMAIL_INPUT)).send_keys(email)
