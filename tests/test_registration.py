@@ -20,7 +20,6 @@ def test_registration_success():
 
     account_element = wait.until(EC.visibility_of_element_located(ACCOUNT_HEADER))
     assert 'Личный Кабинет' in account_element.text
-    driver.quit()
 
 
 def test_registration_short_password():
