@@ -10,6 +10,3 @@ def generate_password(length=6):
 
 def generate_name():
     return "Test User"
-print(generate_email())
-print(generate_password())
-print(generate_name())
