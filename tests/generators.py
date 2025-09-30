@@ -1,7 +1,7 @@
 import string
+import random
 
 
-URL = "https://stellarburgers.nomoreparties.site/"
 def generate_email():
     return f"Narine_kazaryan_31_{random.randint(100,999)}@yandex.ru"
 
