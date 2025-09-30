@@ -1,10 +1,6 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from tests.generators import generate_email, generate_password, generate_name
-
-CHROMEDRIVER_PATH = "C:\\Users\\Artar\\PycharmProjects\\Sprint_5\\WebDriver\\bin\\chromedriver.exe"
-
+from generators import generate_email, generate_password, generate_name
 
 @pytest.fixture
 def driver():
@@ -18,4 +14,4 @@ def user_data():
         "email": generate_email(),
         "password": generate_password(),
         "name": generate_name()
-             }
+    }
