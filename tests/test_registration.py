@@ -2,14 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import *
-from config import BASE_URL
+from config import Urls
 
 class TestRegistration:
 
      def test_registration_success(self, driver, user_data):
         driver = webdriver.Chrome()
         wait = WebDriverWait(driver, 10)
-        driver.get(BASE_URL)
+        driver.get(Urls.BASE_URL)
 
         wait.until(EC.visibility_of_element_located(NAME_INPUT)).send_keys(user_data["name"])
         driver.find_element(*NAME_INPUT).send_keys(user_data["email"])
@@ -23,7 +23,7 @@ class TestRegistration:
      def test_registration_short_password(self, driver, user_data):
          driver = webdriver.Chrome()
          wait = WebDriverWait(driver,10)
-         driver.get(BASE_URL)
+         driver.get(Urls.BASE_URL)
 
          wait.until(EC.visibility_of_element_located(NAME_INPUT)).send_keys(user_data["name"])
          driver.find_element(*NAME_INPUT).send_keys(user_data["email"])

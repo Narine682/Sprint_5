@@ -1,1 +1,2 @@
-BASE_URL = "https://stellarburgers.nomoreparties.site"
+class Urls:
+    BASE_URL = "https://stellarburgers.nomoreparties.site"
